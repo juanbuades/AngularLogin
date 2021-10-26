@@ -3,21 +3,23 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { RegisterComponent } from './register/register.component';
-import { LoginComponent } from './login/login.component';
+import { HomeModule } from './home/home.module';
+import { LoginModule } from './login/login.module';
+import { RegisterModule } from './register/register.module';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    RegisterComponent,
-    LoginComponent,
-    
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    LoginModule,
+    HomeModule,
+    RegisterModule
   ],
   providers: [],
   bootstrap: [AppComponent]
-})
+})    
 export class AppModule { }
